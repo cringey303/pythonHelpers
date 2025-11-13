@@ -2,7 +2,7 @@
 
 Some Python helper modules for terminal colors, validated user input, and custom errors.
 
-Test them for yourself in [tester.py](tester.py).
+Test them for yourself in [`tester.py`](tester.py).
 
 ## How to Use
 
