@@ -37,7 +37,7 @@ Output:
 Provides custom exceptions ParserError and StateException.
 
 ### Example Usage
-Use try-except blocks when implementing.
+Use try-except blocks when implementing:
 ```python
 from errors import ParserError, StateException
 from colors import Colors as c # For colored error messages
