@@ -70,3 +70,48 @@ except StateException as e:
 Output:
 
 <img width="616" height="94" alt="Screenshot 2025-11-13 at 11 48 01" src="https://github.com/user-attachments/assets/81a8a8c5-6265-4a9b-a145-8d4337a38dbd" />
+
+## `validinput.py`
+
+Provides static methods to get valid user input, continuously looping until exit or valid input.
+
+### Example Usage
+```python
+from validinput import ValidInput
+
+# --- Get valid integer ---
+# Loop until a valid integer is entered.
+age = ValidInput.get_int_input("Enter your age: ")
+
+# --- Get valid integer in a range ---
+# Loop until an integer between 1 and 5 is entered.
+rating = ValidInput.get_int_input("Enter a rating (1-5): ", min=1, max=5)
+print(f"You rated: {rating}")
+
+
+# --- Get valid float ---
+# Loop until a valid float is entered.
+price = ValidInput.get_float_input("Enter a price: ")
+
+# --- Get valid float in a range ---
+# Loop until a float between 1.00 and 99.99 is entered.
+price = ValidInput.get_float_input("Enter price ($1.00 - $99.99): ", min=1.0, max=99.99)
+print(f"Price set: ${price:.2f}")
+
+
+# --- Get valid file name ---
+# Loop until the user enters a valid .txt filename
+# that exists in the same directory.
+# Can change 'extension' argument to any file extension (e.g. csv, tsv, txt)
+filename = ValidInput.get_valid_file_name('txt')
+print(f"Accessing file: {filename}")
+
+
+# --- Get a list of integers ---
+# Get a comma-separated list of ints, e.g., "1, 2, 3"
+scores = ValidInput.get_int_list_input("Enter scores (0-100), separated by commas: ", min=0, max=100)
+print(f"Your scores: {scores}")
+```
+Output:
+
+<img width="563" height="377" alt="Screenshot 2025-11-13 at 14 26 59" src="https://github.com/user-attachments/assets/f8ba5b3c-cfb2-4aa0-bd7b-744da7e8c520" />
