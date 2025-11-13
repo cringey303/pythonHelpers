@@ -10,7 +10,7 @@ To use these helpers, place the `.py` files (`colors.py`, `errors.py`, `validinp
 
 ---
 
-## `colors.py`
+## [`colors.py`](colors.py)
 
 Provides a `Colors` class for adding ANSI colors to terminal output.
 
@@ -34,7 +34,7 @@ Output:
 <img width="410" height="153" alt="Screenshot 2025-11-13 at 11 38 35" src="https://github.com/user-attachments/assets/ad236098-6854-4e3c-be70-7a26570bc400" />
 
 
-## `errors.py`
+## [`errors.py`](errors.py)
 
 Provides custom exceptions ParserError and StateException.
 
@@ -73,7 +73,7 @@ Output:
 
 <img width="616" height="94" alt="Screenshot 2025-11-13 at 11 48 01" src="https://github.com/user-attachments/assets/81a8a8c5-6265-4a9b-a145-8d4337a38dbd" />
 
-## `validinput.py`
+## [`validinput.py`](validinput.py)
 
 Provides static methods to get valid user input, continuously looping until exit or valid input.
 
