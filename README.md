@@ -26,3 +26,47 @@ print(f"{c.YELLOW}Warning:{c.RESET} Please check your input.")
 print(f"{c.BLUE}This is blue text.{c.RESET}")
 print(f"{c.PURPLE}This is purple text.{c.RESET}")
 print(f"{c.CYAN}This is cyan text.{c.RESET}")
+```
+Output:
+
+<img width="410" height="153" alt="Screenshot 2025-11-13 at 11 38 35" src="https://github.com/user-attachments/assets/ad236098-6854-4e3c-be70-7a26570bc400" />
+
+
+## `errors.py`
+
+Provides custom exceptions ParserError and StateException.
+
+### Example Usage
+Use try-except blocks when implementing.
+```python
+from errors import ParserError, StateException
+from colors import Colors as c # For colored error messages
+
+def parse_my_data(data):
+    """A function that could fail with a custom error."""
+    if data == "bad":
+        raise ParserError("Invalid format.")
+    if data == "stuck":
+        raise StateException("The machine is in an unrecoverable state.")
+    return f"Parsed data: {data}"
+
+# --- ParserError Example ---
+try:
+    print(parse_my_data("good"))
+    print(parse_my_data("bad"))
+except ParserError as e:
+    print(f"{c.RED}Parser error: {e.message}{c.RESET}")
+except StateException as e:
+    print(f"{c.YELLOW}State exception: {e.message}{c.RESET}")
+
+# --- StateException Example ---
+try:
+    print(parse_my_data("stuck"))
+except ParserError as e:
+    print(f"{c.RED}Parser error: {e.message}{c.RESET}")
+except StateException as e:
+    print(f"{c.YELLOW}State exception: {e.message}{c.RESET}")
+```
+Output:
+
+<img width="616" height="94" alt="Screenshot 2025-11-13 at 11 48 01" src="https://github.com/user-attachments/assets/81a8a8c5-6265-4a9b-a145-8d4337a38dbd" />
