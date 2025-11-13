@@ -23,17 +23,17 @@ class ValidInput:
             except ValueError:
                 print(f'{c.RED}Invalid input. Please enter a float.{c.RESET}')
                 
-    def get_valid_file_name() -> str:
+    def get_valid_file_name(extension) -> str:
         while True:
             file = input('Enter the name of the input file: ')
             if file.startswith(' ') or file.startswith('.') or file.startswith('-') or file.startswith('_') or '\\' in file or '/' in file or ':' in file or '*' in file or '?' in file or '"' in file or '<' in file or '>' in file or '|' in file or ':' in file:
                 print(f'{c.RED}Invalid input. Please enter a valid file name.{c.RESET}')
-            elif file.endswith('.txt'):
+            elif file.endswith('.' + extension):
                 file+=''
-            elif "." in file and not file.endswith('.txt'):
-                print(f"{c.RED}Invalid file type. Please enter a .txt file{c.RESET}")
+            elif "." in file and not file.endswith(f'.{extension}'):
+                print(f"{c.RED}Invalid file type. Please enter a .{extension} file{c.RESET}")
             else:
-                file += '.txt'
+                file += f'.{extension}'
             try:
                 with open(file, 'r') as f:
                     print(f"File found: {c.GREEN}{file}{c.RESET}")
