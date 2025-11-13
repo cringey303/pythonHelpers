@@ -1,18 +1,18 @@
 # pythonHelpers
 
-A small collection of Python helper modules for terminal colors, validated user input, and custom errors.
+Some Python helper modules for terminal colors, validated user input, and custom errors.
 
 ## How to Use
 
-To use these helpers, place the `.py` files (`colors.py`, `errors.py`, `validinput.py`) in your project's directory. You can then import the classes and functions directly into your scripts.
+To use these helpers, place the `.py` files (`colors.py`, `errors.py`, `validinput.py`) in your project's directory, then import the classes and functions directly into your scripts.
 
 ---
 
 ## `colors.py`
 
-Provides a `Colors` class for adding ANSI color to terminal output.
+Provides a `Colors` class for adding ANSI colors to terminal output.
 
-**Note:** The `color_item` method as written will not work as a class or static method. The intended and most reliable way to use this class is by accessing its color attributes, as shown in the examples in `validinput.py`.
+**Note:** The `color_item` method as written does not work as a class or static method. The best way to use this class is by accessing its color attributes.
 
 ### Example Usage
 
