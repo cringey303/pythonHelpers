@@ -65,14 +65,14 @@ def test_inputs():
     # 4. File Test
     print(f"\n{c.CYAN}Test: get_valid_file_name ('txt'){c.RESET}")
     # Create a dummy file so the user has something to type that works
-    dummy_filename = "test_dummy.txt"
+    dummy_filename = "test.txt"
     with open(dummy_filename, "w") as f:
         f.write("This is a temporary file for testing.")
-    print(f"{c.GREY}(Created temporary file '{dummy_filename}' for you to test with){c.RESET}")
+    print(f"{c.GREY}(Created temporary file '{dummy_filename}' for testing){c.RESET}")
     
     try:
         filename = ValidInput.get_valid_file_name("txt")
-        print(f"{c.GREEN}Accepted file: {filename}{c.RESET}")
+        print(f"{c.GREEN}Accepted: {filename}{c.RESET}")
     finally:
         # Clean up the dummy file
         if os.path.exists(dummy_filename):
@@ -89,6 +89,6 @@ if __name__ == "__main__":
         test_colors()
         test_errors()
         test_inputs()
-        print(f"\n{c.GREEN}=== All Tests Completed ==={c.RESET}")
+        print(f"\n{c.GREEN}=== Tests Completed ==={c.RESET}")
     except KeyboardInterrupt:
-        print(f"\n{c.RED}Test Aborted by User.{c.RESET}")
+        print(f"\n{c.RED}Test Aborted.{c.RESET}")
