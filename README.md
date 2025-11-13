@@ -2,6 +2,8 @@
 
 Some Python helper modules for terminal colors, validated user input, and custom errors.
 
+Test them for yourself in [tester.py](tester.py).
+
 ## How to Use
 
 To use these helpers, place the `.py` files (`colors.py`, `errors.py`, `validinput.py`) in your project's directory, then import the classes and functions directly into your scripts.
